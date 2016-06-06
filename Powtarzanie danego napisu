@@ -1,0 +1,19 @@
+#include <iostream>
+#include <windows.h>
+#include <cstdlib>
+using namespace std;
+string imie; int powtorzenia;
+int main()
+{
+    cout << "Podaj swoje imie: ";
+    cin >> imie;
+    cout << "Ile razy mam powtorzyc twoje imie?: ";
+    cin >> powtorzenia;
+    for(int i=1; i<=powtorzenia; i++)
+    {
+        system("cls");
+        Sleep(1000);
+        cout << i << ". " << imie << endl;
+    }
+    return 55;
+}
