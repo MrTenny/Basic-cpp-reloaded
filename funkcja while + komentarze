@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+int populacja=1; int godzin=0;
+
+int main()
+{
+    while(populacja<=1000000000) //Populacja jest "<" mniejsza lub "=" równa 1 000 000 000.
+    {
+        godzin++; // Co ile godzin ma sie rozmnażać ++ to inaczej 1.
+        populacja = populacja *2; // Co godzine wyrastają kolejne 2* bakterie.
+        cout << "Minelo godzin: " << godzin;
+        cout << " Liczba bakterii: " << populacja <<endl;
+    }
+    return 0;
+}
