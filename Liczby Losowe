@@ -1,0 +1,29 @@
+//1st game
+#include <iostream>
+#include <windows.h>
+#include <cstdlib>
+#include <stdio.h>
+#include <time.h>
+using namespace std;
+int liczba, strzal, ile_prob;
+int main()
+{
+    cout << "Witaj! Pomyslalem sobie bys wpisal liczbe od 1 do 100." <<endl;
+    srand(time(NULL)); // srand(start random). Argument to NULL
+    liczba = rand()%100+1; // % czyli reszta z dzielenia. Zawsze musi byc to +1. #math
+
+    while(strzal!=liczba) // Strzał jest "!=" równy od liczba.
+    {
+        ile_prob++; // Program automatycznie juz bedzie liczył od 1 czyli ++ wszystkie po kolei próby.
+        cout << "No to zgaduj jaka to liczba... (To jest twoja "<<ile_prob<<" proba): ";
+        cin >> strzal;
+        if(strzal==liczba)
+            cout << "Udalo sie wygrales. (W "<<ile_prob<<" probie.)" <<endl;
+        else if(strzal<liczba)
+            cout << "ZA MALO!" <<endl;
+        else if(strzal>liczba)
+            cout << "ZA DUZO!" <<endl;
+    }
+    getchar();getchar(); // Musi być 2 razy getchar();getchar();
+    return 55;
+}
