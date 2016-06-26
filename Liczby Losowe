@@ -9,7 +9,7 @@ int liczba, strzal, ile_prob;
 int main()
 {
     cout << "Witaj! Pomyslalem sobie bys wpisal liczbe od 1 do 100." <<endl;
-    srand(time(NULL)); // srand(start random). Argument to NULL
+    srand(time(NULL)); // srand(start random). Argument to NULL - Ta funkcja NULL pobiera czas od roku 1980 do TERAZ.
     liczba = rand()%100+1; // % czyli reszta z dzielenia. Zawsze musi byc to +1. #math
 
     while(strzal!=liczba) // Strzał jest "!=" równy od liczba.
