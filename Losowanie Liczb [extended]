@@ -1,0 +1,38 @@
+// Losowanie liczb by MrTenny
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+#include <stdio.h>
+#include <windows.h>
+using namespace std;
+int l, po, x;                                             // l = LICZBA DO ODGADNIECIA po = PRÓBA ODGADNIĘCIA
+int main()
+{
+    cout << "PROSZE CZEKAC TRWA LADOWANIE PROGRAMU...\n\nLADOWANIE..." << endl;
+    Sleep(2500);
+    cout << "LADOWANIE..." << endl;
+    Sleep(3500);
+    cout << "LADOWANIE..." << endl;
+    Sleep(3500);
+    cout << "\t\t\tWITAJ W PROGRAMIE W KTORYM MUSISZ ODGADNAC LICZBE OD 1 DO 100!" << endl;
+    srand(time(NULL));
+    l = rand()% 100+1;
+
+    while(po!=l)
+    {
+        x++;
+        Sleep(1350);
+        cout << "\nPODAJ LICZBE: ";
+        cin >> po;
+
+        if(po==l)
+        cout << "\nGRATULACJE WYGRALES!! ZA ["<< x <<"] RAZEM!" <<endl;
+
+        if(po<l)
+        cout << "\nZA MALO! TO JEST TWOJA ["<< x <<"] PROBA." << endl;
+        if(po>l)
+        cout << "\nZA DUZO! TO JEST TWOJA ["<< x <<"] PROBA." << endl;
+    }
+    getchar();getchar();
+    return 0;
+}
