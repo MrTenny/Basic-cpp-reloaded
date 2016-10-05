@@ -1,0 +1,44 @@
+#include <iostream>
+#include <fstream> // biblioteka odpowiedzialna za wspolprace z plikami.
+#include <cstdlib>
+using namespace std;
+int numer, nr_linii=1;
+string imie,nazwisko;
+int main()
+{
+
+    fstream plik;
+    plik.open("wizytowka.txt", ios::in); // ios::in = WPROWADZ DO PROGRAMU Z PLIKU.
+
+    if(plik.good()==false)
+    {
+        cout << "Plik nie istnieje!";
+        exit(0);
+    }
+
+    string linia;
+    int(nr_linii = 1);
+    while(getline(plik,linia)); // getline = pobierz linie. Pobierze cala linie pomimo spacji.
+
+    {
+        switch(nr_linii)
+        {
+            case 1: imie=linia;
+            break;
+
+            case 2: nazwisko=linia;
+            break;
+
+            case 3: numer==atoi(linia.c_str());
+            break;
+        }
+        nr_linii++;
+    }
+
+    plik.close();
+
+    cout << imie << endl; // Wyrzucenie imienia do pliku.
+    cout << nazwisko << endl;
+    cout << numer << endl;
+    return(0);
+}
