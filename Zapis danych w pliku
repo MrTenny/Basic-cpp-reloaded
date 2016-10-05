@@ -1,0 +1,28 @@
+#include <iostream>
+#include <fstream> // biblioteka odpowiedzialna za wspolprace z plikami.
+using namespace std;
+int numer;
+string imie,nazwisko;
+int main()
+{
+    cout << "Podaj imie: ";
+    cin >> imie;
+    cout << "Podaj nazwisko: ";
+    cin >> nazwisko;
+    cout << "Podaj numer telefonu: ";
+    cin >> numer;
+
+    fstream plik;
+    plik.open("wizytowka.txt", ios::out | ios::app);
+     /*
+    plik.open = otworz plik(JAKI? SCIEŻKA PLIKU(NAZWA))
+    ios::out = WYPROWADZ STRUMIEN DANYCH DO PLIKU.
+    ios::app = DOŁĄCZ DO PLIKU.
+    */
+
+    plik << imie << endl; // Wyrzucenie imienia do pliku.
+    plik << nazwisko << endl;
+    plik << numer << endl;
+
+    plik.close();
+}
