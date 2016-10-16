@@ -1,0 +1,24 @@
+// wlasne funkcje
+#include <iostream>
+using namespace std;
+float metry;
+
+float ile_cali(float m) // nazwa funkcji ile_cali(). Jest to nagłówek funkcji.
+{
+    return m*39.37;
+}
+float ile_jardow(float me)
+{
+    return me*1.0936;
+}
+
+int main()
+{
+    cout << "PODAJ METRY: ";
+    cin >> metry;
+
+    cout << "Cale: " << ile_cali(metry) << endl;
+    cout << "Jardy: " << ile_jardow(metry) << endl;
+
+   return 0;
+}
