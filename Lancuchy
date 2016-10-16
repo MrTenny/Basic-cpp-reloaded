@@ -1,0 +1,63 @@
+_________________________________________________
+// ZNAJDOWANIE FRAZY WEWNĄTRZ ŁANCUCHA
+_________________________________________________
+#include <algorithm>
+{
+   string napis = "Ala ma kota";
+   string szukaj = "kot";
+
+   size_t pozycja = napis.find(szukaj);
+   if(pozycja!=string::npos)
+    cout << "ZNALEZIONO NA POZYCJI: " << pozycja;
+   else
+    cout << "NIE ZNALEZIONO.";
+    return 0;
+}
+________________________________________________
+// POWIEKSZANIE, POMNIEJSZANIE NAPISU
+________________________________________________
+
+#include <algorithm>
+{
+   string napis = "Ala ma kota";
+
+   transform (napis.begin(),napis.end(),napis.begin(), ::toupper);
+   cout << napis << endl;
+   transform (napis.begin(),napis.end(),napis.begin(), ::tolower);
+   cout << napis << endl;
+   return 0;
+}
+________________________________________________
+// KASOWANIE DANEGO FRAGMENTU ŁAŃCUCHA
+________________________________________________
+
+#include <algorithm>
+{
+   string napis = "Ala ma kota";
+    napis.erase(3,3); //
+    cout << napis;
+
+   return 0;
+}
+________________________________________________
+// WSTAWIANIE FRAGMENTU JUŻ DO INSTNIEJĄCEGO ŁAŃCUCHA
+________________________________________________
+#include <algorithm>
+{
+   string napis = "Ala ma kota";
+    napis.insert(11," FILEMONA");
+    cout << napis;
+
+   return 0;
+}
+// PRZESTAWIANIE WYBRANEGO DANEGO FRAGMENTU 
+
+#include <algorithm>
+
+{
+   string napis = "Ala ma kota";
+    napis.replace(4,2," nie ma");
+    cout << napis;
+
+   return 0;
+}
