@@ -1,4 +1,3 @@
-// DO POPRAWY!
 #include <iostream>
 #include <fstream>
 #include <cstdlib>
@@ -60,16 +59,12 @@ int main()
             poprawna[nr_pytania] = linia;
             break;
         }
-        if(nr_linii==8)
-        {
-            nr_linii==2;
-            nr_pytania++;
-        }
+        if(nr_linii==8) {nr_linii=2; nr_pytania++;}
         nr_linii++;
     }
     plik.close();
 
-    for(int i=0; i<=4; i=0)
+    for(int i=0; i<=4; i++)
     {
         cout << endl << tresc[i] << endl;
         cout << "A. " << odpA[i] << endl;
@@ -85,6 +80,7 @@ int main()
         if(odpowiedz == poprawna[i])
         {
             cout << "Gratulacje! Zdobywasz punkt!" << endl;
+            punkty++;
         }
         else
         {
