@@ -1,4 +1,3 @@
-// wlasne funkcje
 #include <iostream>
 using namespace std;
 float metry;
@@ -12,6 +11,11 @@ float ile_jardow(float me)
     return me*1.0936;
 }
 
+void ile_mil(float mil) // funkcja która nic nie zwraca
+{
+    cout << "Mile: " << mil*0.0006213;
+}
+
 int main()
 {
     cout << "PODAJ METRY: ";
@@ -19,6 +23,16 @@ int main()
 
     cout << "Cale: " << ile_cali(metry) << endl;
     cout << "Jardy: " << ile_jardow(metry) << endl;
-
+    ile_mil(metry);
    return 0;
 }
+
+/** \brief
+ * FUNKCJA - PODPROGRAM MAJĄCY ZA ZADANIE WYKONAĆ 
+   PEWNE DZIAŁANIA NA DANYCH WEJŚCIOWYCH I 
+   ZWRÓCIĆ GŁÓWNEMU PROGRAMOWI WYNIK SWOICH DZIAŁAŃ.
+   
+ * PROCEDURA - PODPROGRAM KTÓRY NIE ZWRACA ŻADNEJ
+   WARTOŚCI FUNKCJI WYWOŁUJĄCEJ.
+ 
+ */
