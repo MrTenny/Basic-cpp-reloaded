@@ -61,3 +61,17 @@ ________________________________________________
 
    return 0;
 }
+
+________________________________________________
+// WYJĘCIE WYBRANEJ CZĘŚCI Z ŁAŃCUCHA
+________________________________________________
+
+#include <algorithm>
+
+{
+   string napis = "Ala ma kota";
+   string nowynapis = napis.substr(4,7);
+    cout << nowynapis;
+
+   return 0;
+}
